@@ -5,6 +5,8 @@ resource "aws_cloudwatch_log_group" "example1" {
     Environment = "production"
     Application = "serviceA"
   }
+  kms_key_id = "cwKey"
+  retention_in_days = 90
 }
 
 resource "aws_cloudwatch_log_group" "example2" {
